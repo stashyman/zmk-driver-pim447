@@ -484,8 +484,8 @@ static int pimoroni_pim447_init(const struct device *dev) {
     }
 
     K_TIMER_DEFINE(automouse_layer_timer, deactivate_automouse_layer, NULL);
-//#else
-//static void activate_automouse_layer() {}//enable to remove autolayer
+#else
+static void activate_automouse_layer() {}//enable to remove autolayer
 #endif
 
 static const struct pimoroni_pim447_config pimoroni_pim447_config = {
